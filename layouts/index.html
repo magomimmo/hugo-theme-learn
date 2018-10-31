@@ -4,17 +4,26 @@
 </span>
 
 {{if .Site.Home.Content }} 
-{{.Site.Home.Content}}	
-{{else}}           
-	{{if eq .Site.Language.Lang "fr"}}
-		<h1>Personaliser la page d'accueil</h1>
+	{{.Site.Home.Content}}	
+{{else if eq .Site.Language.Lang "fr"}}           
+	<h1>Personaliser la page d'accueil</h1>
+	<p>
+		Le site fonctionne. Ne pas oublier de personaliser cette page avec votre propre contenu. 3 manières de faire :
+	</p>
+	<ul>
+		<li><b>1. </b> Créer un fichier _index.md dans le dossier <b>content</b> et le remplir de Markdown</li>
+		<li><b>2. </b> Créer un fichier index.html dans le dossier <b>static</b> et le remplir de code HTML</li>
+		<li><b>3. </b> Configurer le serveur http pour rediriger automatiquement la homepage vers la page de votre choix dans le site</li>
+	</ul>
+	{{else if eq .Site.Language.Lang "it"}}
+		<h1>Personalizza la home page</h1>
 		<p>
-		  Le site fonctionne. Ne pas oublier de personaliser cette page avec votre propre contenu. 3 manières de faire :
+			Il sito funziona correttamente. Non dimenticare di personalizzare questa home page. Per farlo hai tre alternative:
 		</p>
 		<ul>
-			<li><b>1. </b> Créer un fichier _index.md dans le dossier <b>content</b> et le remplir de Markdown</li>
-			<li><b>2. </b> Créer un fichier index.html dans le dossier <b>static</b> et le remplir de code HTML</li>
-		  <li><b>3. </b> Configurer le serveur http pour rediriger automatiquement la homepage vers la page de votre choix dans le site</li>
+			<li><b>1. </b> Creare la pagina _index.md nella cartella <b>content</b> e scrivere il contenuto in markdown</li>
+			<li><b>2. </b> Creare la pagina index.html nella cartella <b>static</b> e scrivere il contenuto in HTML</li>
+			<li><b>3. </b> Configurare il tuo server hattp in modo da ridirigere automaticamente la home page verso una delle pagine del sito.</li>
 		</ul>
 	{{else}}
 		<h1>Customize your own home page</h1>
@@ -27,5 +36,4 @@
 		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
 		</ul>
 	{{end}}
-{{ end }}  
 {{ partial "footer.html" . }}

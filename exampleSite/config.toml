@@ -73,3 +73,30 @@ weight = 20
 name = "<i class='fas fa-fw fa-bullhorn'></i> Crédits"
 url = "/credits"
 weight = 30
+
+[Languages.it]
+title = "Documentazione per il tema Learn di Hugo"
+weight = 1
+languageName = "Italiano"
+
+[[Languages.it.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> Progetto Github"
+identifier = "ds"
+url = "https://github.com/matcornic/hugo-theme-learn"
+weight = 10
+
+[[Languages.it.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-camera'></i> Vetrina"
+url = "showcase"
+weight = 11
+
+[[Languages.it.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bookmark'></i> Documentazione di Hugo"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
+weight = 20
+
+[[Languages.it.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Crediti"
+url = "/credits"
+weight = 30
